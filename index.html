@@ -1,0 +1,41 @@
+<html>
+	<head>
+		<title>Demo Project</title>
+		<style>
+			div.container{
+					border:1px #ddd solid;
+					height:50px;
+					line-height:50px;
+					background-color:orange;
+					color:#fff;
+					border-radius:10px;
+					cursor:pointer;
+					user-select:none;
+					text-align:center;
+					font-weight:bolder;
+					font-family:calibri;
+			}
+		</style>
+	</head>
+	<body>
+		<div data-item='one' class='container'>Button</div>
+		<div data-item='two' class='container'>Button</div>
+		<div data-item='three' class='container'>Button</div>
+		<div data-item='four' class='container'>Button</div>
+		<div data-item='five' class='container'>Button</div>
+		<div data-item='six' class='container'>Button</div>
+		<div data-item='seven' class='container'>Button</div>
+		<div data-item='eight' class='container'>Button</div>
+		<div data-item='nine' class='container'>Button</div>
+		<div data-item='ten' class='container'>Button</div>
+		<div data-item='eleven' class='container'>Button</div>
+		<div data-item='twelve' class='container'>Button</div>
+
+		<script>
+			let buttons=document.querySelectorAll("div.container");
+			[...buttons].forEach(button=>button.addEventListener("click",function(){
+							window.alert("welcome=>"+this.dataset.item);
+			}));
+		</script>
+	</body>
+</html>
